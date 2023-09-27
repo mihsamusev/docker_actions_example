@@ -10,7 +10,3 @@ class Settings(BaseModel):
     host: IPvAnyAddress = HOST
     port: int = PORT
     base_url: HttpUrl = BASE_URL
-
-
-if __name__ == "__main__":
-    print(Settings().model_dump_json(indent=4))
