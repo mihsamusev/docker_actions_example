@@ -5,10 +5,22 @@ Build locally
 docker build -t example .
 ```
 
-Run locally 
+Run locally and submit env variables
 ```sh
 docker run -it --rm example
 docker run -it --rm -e BASE_URL=http://example.com example
+```
+
+Create `.env` file with the following content
+```txt
+PORT=420
+BASE_URL=http://based.com
+```
+
+Run locally 
+```sh
+docker run -it --rm example
+docker run -it --rm --env-file .env example
 ```
 
 Pull and run published
